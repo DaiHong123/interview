@@ -1,4 +1,4 @@
-package first;
+package xiaozhao2016.first;
 
 /**
  * @Description: 之字打印数组

@@ -1,4 +1,4 @@
-package second;
+package xiaozhao2016.second;
 
 /**
  * @Description: 旋转字符串
