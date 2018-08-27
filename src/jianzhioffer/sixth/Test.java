@@ -7,28 +7,35 @@ package jianzhioffer.sixth;
  */
 public class Test {
     public static void main(String[] args){
-        int[] array = {4,5,1,2,3};
+        int[] array = {1,2,3,4,5};
         System.out.println(minNumberInRotateArray(array));
     }
-    public static int minNumberInRotateArray(int[] array){
-        if (array.length==0) return 0;
-        int left = 0;
-        int right = array.length-1;
+    public static int minNumberInRotateArray(int[] arr){
+        /*int left = 0;
         int mid = left;
-        while (array[left]>=array[right]){
-            if (right-left==1){
+        int right = arr.length-1;
+        while (arr[left] >= arr[right]) {
+            if (right-left == 1) {
                 mid = right;
                 break;
             }
-            mid = (left+right)/2;
-            if (array[mid]>=array[left]){
-                left = mid;
+            mid = (left + right) / 2;
+            if (arr[mid] >= arr[left]) {
+                left = mid ;
             }
-            if (array[mid]<array[right]){
-                right = mid;
+            if (arr[mid] < arr[right]) {
+                right = mid ;
+            }
+
+        }
+        return arr[mid];*/
+        int min = arr[0];
+        for (int i=0;i<arr.length-1;i++){
+            if (arr[i]>arr[i+1]){
+                min = arr[i+1];
             }
         }
-        return array[mid];
+       return min;
     }
 
 }
