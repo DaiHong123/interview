@@ -25,6 +25,7 @@ public class Test {
         listNode1.next = listNode2;
         listNode2.next = listNode3;
         listNode3.next = listNode4;
+
     }
     public static ListNode FindKthToTail(ListNode head,int k) {
         if (k<0) return null;
