@@ -14,6 +14,8 @@ package xiaozhao2016.eighteenth;
 public class Test {
     public static void main(String[] args) {
         int[] A = {1,2,6,5,8,9};
+        int a = '2';
+        System.out.println(a);
         System.out.println(findShortest(A, A.length));
     }
 
