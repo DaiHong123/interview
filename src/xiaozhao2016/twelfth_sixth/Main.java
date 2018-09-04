@@ -14,4 +14,29 @@ package xiaozhao2016.twelfth_sixth;
  * @Date: Created in  2018/9/3
  */
 public class Main {
+    public static void main(String[] args){
+        String A = "abc";
+        String B = "adc";
+        System.out.println(findMinCost(A,A.length(),B,B.length(),5,3,100));
+    }
+    public static int findMinCost(String A, int n, String B, int m, int c0, int c1, int c2) {
+        // write code here
+        int[][] arr = new int[n+1][m+1];
+        for (int i=0;i<n+1;i++){
+            arr[i][0] = c1*i;
+        }
+        for (int j=0;j<m+1;j++){
+            arr[0][j] = c0*j;
+        }
+        for (int i=1;i<n+1;i++){
+            for (int j=1;j<m+1;j++){
+                if (A.charAt(i-1)==B.charAt(j-1)){
+                    arr[i][j] = arr[i-1][j-1];
+                }else {
+                    arr[i][j] = Math.min(arr[i-1][j-1]+c2,Math.min(arr[i-1][j]+c1,arr[i][j-1]+c0));
+                }
+            }
+        }
+        return arr[n][m];
+    }
 }
