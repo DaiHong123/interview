@@ -8,6 +8,8 @@ package dh.second;
 public class Test {
     public static void main(String[] args){
         int money = 105600123;
+        String s = "book";
+        
         convent(money);
     }
     public static String convent(int money){
